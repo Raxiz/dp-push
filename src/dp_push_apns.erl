@@ -94,6 +94,7 @@ wrap_sound(default) -> ["\"sound\":\"default\""];
 wrap_sound(Sound) -> ["\"sound\":\"", Sound, "\""].
 
 wrap_data(undefined) -> [];
+wrap_data({direct, Data}) -> [",",Data];
 wrap_data(Data) -> [",\"d\":\"", Data, "\""].
 
 

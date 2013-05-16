@@ -21,11 +21,9 @@
 	 }).
 
 -record(apns_msg, {
-	  alert :: iolist() | #alert{}, % An alert message to display to the user
-	  badge :: integer(),           % A number to badge the application icon with
-	  sound :: iolist() | default,  % A sound to play
-	  data :: iolist()              % custom payload values outside the Apple-reserved aps namespace
+	  alert :: iolist() | #alert{},         % An alert message to display to the user
+	  badge :: integer(),                   % A number to badge the application icon with
+	  sound :: iolist() | default,          % A sound to play
+	  data :: iolist() | {direct, iolist()} % custom payload values outside the Apple-reserved aps namespace
 	 }).
-
-
 
